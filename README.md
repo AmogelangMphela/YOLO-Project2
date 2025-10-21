@@ -14,7 +14,7 @@ The primary goal of this project is to:
 
 ---
 
-## Folder Structure (Please open the README.md file... file structure is better organize in the file)
+## Folder Structure (Please open the README.md file... file structure is better organized in the file)
 
 
 
