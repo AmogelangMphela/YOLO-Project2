@@ -5,7 +5,7 @@ This project is a modified implementation of the **Ultralytics YOLO** framework,
 
 ---
 
-## Project Overview
+## Project Overview ()
 
 The primary goal of this project is to:
 1. **Customize** the standard YOLO architectures with modules like **CBAM (Convolutional Block Attention Module)** and **ECA (Efficient Channel Attention)**.
@@ -14,7 +14,7 @@ The primary goal of this project is to:
 
 ---
 
-## Folder Structure
+## Folder Structure (Please open the README.md file file structure is better organize in the file)
 
 
 
@@ -43,8 +43,6 @@ YOLO2-Project2/ultralytics-main/
 ├── ultralytics/                # Core Modified Ultralytics Source
 
 │   ├── cfg/                    # YAML configurations for models and datasets
-
-│   │   ├── datasets/
 
 │   │   └── models/             # Model architecture definitions
 
