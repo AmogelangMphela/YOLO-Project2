@@ -14,47 +14,40 @@ The primary goal of this project is to:
 
 ---
 
-## Folder Structure (Please open the README.md file... file structure is better organized in the file)
-
-
+## 📁 Folder Structure
 
 The repository is organized to clearly separate configurations, training results, and the core Ultralytics source code.
-The commented files are the relevant files
 
-
+```bash
 YOLO2-Project2/
-│
-├── ultralytics-main/
-│   │
-│   ├── Basketball_dataset/          # Custom basketball dataset (train/val/test splits)
-│   │
-│   ├── TrainResults/               # Training outputs, logs, and visualizations
-│   │   │
-│   │   ├── yolov5n/                # Baseline YOLOv5-nano results
-│   │   │   ├── Training/           # Logs, checkpoints, configs
-│   │   │   ├── Test/               # Evaluation outputs
-│   │   │   └── _results/           # Grad-CAM heatmaps
-│   │   │
-│   │   └── yolov5n_cbam_backbone/  # Example modified model results
-│   │       └── ...                 # (Same structure as above)
-│   │
-│   ├── theimages/                  # Visualization images & Grad-CAM outputs
-│   │
-│   ├── ultralytics/                # Modified Ultralytics source code
-│   │   │
-│   │   ├── cfg/                    # Model & dataset configuration files
-│   │   │   └── models/
-│   │   │       ├── v5/
-│   │   │       ├── v8/
-│   │   │       │   ├── yolov8.yaml
-│   │   │       │   ├── yolov8-cbam.yaml
-│   │   │       │   └── yolov8-eca.yaml
-│   │   │       └── v11/
-│   │   │
-│   │   └── nn/
-│   │       └── modules/
-│   │           └── conv.py         # Contains CBAM, ECA, and modified conv blocks
-│   │
-│   ├── Training.py                # Script for training models
-│   ├── testing.py                 # Script for evaluation (mAP, metrics)
-│   └── Grad-CAM.py                # Attention visualization script
+└── ultralytics-main/
+    ├── Basketball_dataset/          # Custom dataset (train/val/test splits)
+    │
+    ├── TrainResults/                # Training outputs, logs, visualizations
+    │   ├── yolov5n/                 # Baseline YOLOv5-nano
+    │   │   ├── Training/            # Logs, checkpoints, configs
+    │   │   ├── Test/                # Evaluation outputs
+    │   │   └── _results/            # Grad-CAM heatmaps
+    │   │
+    │   └── yolov5n_cbam_backbone/   # Modified model results
+    │       └── ...
+    │
+    ├── theimages/                   # Grad-CAM & visualization images
+    │
+    ├── ultralytics/                 # Modified Ultralytics source
+    │   ├── cfg/
+    │   │   └── models/
+    │   │       ├── v5/
+    │   │       ├── v8/
+    │   │       │   ├── yolov8.yaml
+    │   │       │   ├── yolov8-cbam.yaml
+    │   │       │   └── yolov8-eca.yaml
+    │   │       └── v11/
+    │   │
+    │   └── nn/
+    │       └── modules/
+    │           └── conv.py          # CBAM, ECA, modified conv blocks
+    │
+    ├── Training.py                 # Training script
+    ├── testing.py                  # Evaluation script (mAP, metrics)
+    └── Grad-CAM.py                 # Attention visualization
