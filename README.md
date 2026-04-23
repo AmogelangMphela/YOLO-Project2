@@ -1,6 +1,6 @@
 # YOLO Modification Project: Ultralytics with Attention Mechanisms
 
-This project is a modified implementation of the **Ultralytics YOLO** framework, focusing on integrating and evaluating different **attention mechanisms** 
+This project is a modified implementation of the **Ultralytics YOLO**(https://github.com/ultralytics/ultralytics) framework, focusing on integrating and evaluating different **attention mechanisms** 
 (specifically CBAM and ECA) across various YOLO versions (v5, v8, v11) for object detection.
 
 ---
