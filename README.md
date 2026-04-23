@@ -22,50 +22,39 @@ The repository is organized to clearly separate configurations, training results
 The commented files are the relevant files
 
 
-YOLO2-Project2/ultralytics-main/
-
-├── Basketball_dataset/         # Custom dataset (Basketball) with train/val/test splits.
-
-├── TrainResults/               # Repository for all training logs, metrics, and attention maps.
-
-│   ├── yolov5n/                # e.g., Base YOLOv5-nano results
-
-│   │   ├── _results            # Grad-CAM heatmap
-
-│   │   ├── Test                # Contains the output files from running testing.py.
-
-│   │   └── Training            # Contains logs, model checkpoints, and config files from Training.py.
-
-│   └── yolov5n(cbam-backbone)/ # other modesl YOLOv8, YOLOv11 also found in the same directory as YOLOv5
-
-├── theimages/                  # Images used for visualization and Grad-CAM outputs.
-
-├── ultralytics/                # Core Modified Ultralytics Source
-
-│   ├── cfg/                    # YAML configurations for models and datasets
-
-│   │   └── models/             # Model architecture definitions
-
-│   │       ├── v11/            #Structure the same as v8 shown below
-
-│   │       ├── v5/             #Structure the same as v8 shown below
-
-│   │       └── v8/
-
-│   │           ├── yolov8-cbam.yaml # YOLOv8 configuration with CBAM integrated.
-
-│   │           ├── yolov8-eca.yaml  # YOLOv8 configuration with ECA integrated.
-
-│   │           └── yolov8.yaml      # Baseline YOLOv8 configuration.
-
-│   └── nn/                     # Contains the attention module definitions (e.g., CBAM, ECA)
-
-│   │   ├── modules/
-
-│   │           ├── conv.py      # The ECA and CBAM modules are defined here the original and modified conv blocks are also here
-
-├── Training.py                 # Main script to initiate model training.
-
-├── testing.py                  # Main script to evaluate model performance (mAP, etc.).
-
-└── Grad-CAM.py                 # Script for visualizing model attention/feature maps.
+YOLO2-Project2/
+│
+├── ultralytics-main/
+│   │
+│   ├── Basketball_dataset/          # Custom basketball dataset (train/val/test splits)
+│   │
+│   ├── TrainResults/               # Training outputs, logs, and visualizations
+│   │   │
+│   │   ├── yolov5n/                # Baseline YOLOv5-nano results
+│   │   │   ├── Training/           # Logs, checkpoints, configs
+│   │   │   ├── Test/               # Evaluation outputs
+│   │   │   └── _results/           # Grad-CAM heatmaps
+│   │   │
+│   │   └── yolov5n_cbam_backbone/  # Example modified model results
+│   │       └── ...                 # (Same structure as above)
+│   │
+│   ├── theimages/                  # Visualization images & Grad-CAM outputs
+│   │
+│   ├── ultralytics/                # Modified Ultralytics source code
+│   │   │
+│   │   ├── cfg/                    # Model & dataset configuration files
+│   │   │   └── models/
+│   │   │       ├── v5/
+│   │   │       ├── v8/
+│   │   │       │   ├── yolov8.yaml
+│   │   │       │   ├── yolov8-cbam.yaml
+│   │   │       │   └── yolov8-eca.yaml
+│   │   │       └── v11/
+│   │   │
+│   │   └── nn/
+│   │       └── modules/
+│   │           └── conv.py         # Contains CBAM, ECA, and modified conv blocks
+│   │
+│   ├── Training.py                # Script for training models
+│   ├── testing.py                 # Script for evaluation (mAP, metrics)
+│   └── Grad-CAM.py                # Attention visualization script
